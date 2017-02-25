@@ -1,0 +1,20 @@
+#+ TITLE: Public or Private
+* Epic
+As a C++ developer using a low-tech editor, I want to be able to run a command
+line tool telling me if a symbol is public, protected, or private. I want to
+invoke the tool with the command =public_or_private=. The tool must take one
+~file~ argument indicating that file to look at. The tool must take one ~symbol~
+argument indicating the symbol to look at.
+* User Stories
+- I can run the command =public_or_private= and it shows help text.
+- I can run the commnad =public_or_private <non_existent_filename= and it gives an error to give a valid file.
+- I can run the command =public_or_private <filename>= and it gives an error
+  indicating to give a symbol.
+- I can run the command =public_or_private <filename> <non_existent_symbol>= and
+  it gives an error to give a valid symbol.
+- I can run the command =public_or_private <filename> <public_symbol>= and it outputs =public=.
+- I can run the command =public_or_private <filename> <protected_symbol>= and it outputs =protected=.
+- I can run the command =public_or_private <filename> <private_symbol>= and it outputs =private=.
+* References
+- Clang LibASTMatchersTutorial
+http://clang.llvm.org/docs/LibASTMatchersTutorial.html

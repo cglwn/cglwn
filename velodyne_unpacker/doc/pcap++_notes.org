@@ -1,0 +1,8 @@
+#+TITLE: PCAP++
+* Log
+** DONE Open a file in binary
+This can be done with =std::ifstream(<file>, std::ios::binary)=
+** DONE Read the magic number of the PCAP file
+OMG I read a byte and compared it to a magic number! 
+WOWOWOW. 
+I used to have a major fear of low-level programming but here I am about 6 years into programming, decoding bytes for the first time! :)

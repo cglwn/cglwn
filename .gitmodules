@@ -1,0 +1,21 @@
+[submodule "external/llvm"]
+	path = external/llvm
+	url = https://github.com/llvm-mirror/llvm
+[submodule "external/rtags"]
+	path = external/rtags
+	url = https://github.com/Andersbakken/rtags
+[submodule "external/cudpp"]
+	path = external/cudpp
+	url = https://github.com/cudpp/cudpp
+[submodule "external/LAStools"]
+	path = external/LAStools
+	url = https://github.com/m-schuetz/LAStools.git
+[submodule "external/PotreeConverter"]
+	path = external/PotreeConverter
+	url = https://github.com/potree/PotreeConverter.git
+[submodule "external/ceres-solver"]
+	path = external/ceres-solver
+	url = https://ceres-solver.googlesource.com/ceres-solver
+[submodule "external/lgmath"]
+	path = external/lgmath
+	url = ssh://git@github.com/utiasASRL/lgmath

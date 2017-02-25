@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Point Cloud Renderer</title>
+        <script type="text/javascript" src="src/application.js"></script>
+    </head>
+    <body>
+        <h1>Point Cloud Renderer</h1>
+        <canvas id="canvas"></canvas>
+        <div>
+            <div>
+            <label for="x-slider">X</label>
+            <input id="x-slider" type="range" min="-2" max="2" value="0" step="0.01">
+            </div>
+            <div>
+            <label for="y-slider">Y</label>
+            <input id="y-slider" type="range" min="-2" max="2" value="0" step="0.01">
+            </div>
+            <div>
+            <label for="z-slider">Z</label>
+            <input id="z-slider" type="range" min="-2" max="2" value="0" step="0.01">
+            </div>
+            <div>
+            <label for="roll-slider">Roll</label>
+            <input id="roll-slider" type="range" min=0 max="360" value="0" step="1">
+            </div>
+            <div>
+            <label for="pitch-slider">Pitch</label>
+            <input id="pitch-slider" type="range" min=0 max="360" value="0" step="1">
+            </div>
+            <div>
+            <label for="yaw-slider">Yaw</label>
+            <input id="yaw-slider" type="range" min=0 max="360" value="0" step="1">
+            </div>
+        </div>
+    </body>
+</html>

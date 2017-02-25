@@ -1,0 +1,8 @@
+* TODO An interactive demo visualization for Gaussian Processes
+Could start it as just a static matplotlib graph.
+Maybe extend it to a matplotlib animation by saving static frames to a folder.
+Stretch goal once we get back on the JavaScript bandwagon is to make it work on the web.
+* TODO C++ SQLite RAII wrapper
+Would be nice to apply the RAII stuff from Discovering Modern C++.
+Might have to do this for work if I end up going the SQL route.
+* TODO Refactor my ME597 labs

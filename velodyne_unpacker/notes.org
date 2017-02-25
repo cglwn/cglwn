@@ -1,0 +1,5 @@
+* Goals
+** Create a way to open a PCAP file and place point cloud in SQLite database
+*** Open a PCAP file
+*** Create a C++ RAII wrapper around libpcap
+*** Create a C++ RAII wrapper around SQLite

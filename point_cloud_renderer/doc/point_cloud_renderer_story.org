@@ -1,0 +1,96 @@
+# #+TITLE: Point Cloud Renderer
+
+#+TODO: TODO(t) DOING(ip!) DONE(d!)
+*  Point cloud renderer straight from a PCAP file.
+** Think I will probably need the following tools:
+*** Low-level bit fiddling
+*** OpenGL
+*** Window System
+**** +Just do it on web, there really isn't a great native way.+
+**** +Fuck it, let's design our own GUI library. We will just wrap Qt.+
+Wrappers on top of wrappers. Computers are so fucked.
+
+Qt is such a pain to set up without using QtCreator. I tried installing it
+through their .run installer to =/opt/Qt=. Great. That seemed like it worked.
+Then spent 4 hours in CMake hell trying to get it to find it. FUCK THAT.
+
+Let's go back to the web. At least everything on the web is shareable. FUCK.
+**** BACK TO THE WEB
+** I want to keep third party dependencies minimal.
+** Challenges
+*** +Writing a GUI library is a pretty large undertaking.+
+We can overcome this by just building the bare minimum for the application.
+I should not need more than a window and an OpenGL context.
+
+I do not want to see any Qt specific code in my client library. It should all be
+hidden away under a namespace.
+
+STRIKED: FUCK QT AND ALL THESE C++ GUI LIBS.
+*** Not getting bogged down in package management & reproducible builds.
+If you're really worried about the bullshit involved with always being able to
+build, just remember that you can copy this into a fucking VM/Docker workspace
+and set that up later. That's really only important if you will still care about
+this stupid shit later and judging by your output, you probably won't. Make this
+shit good first. Then you can worry about the BS involved with making it
+reproducible. Just remember, C++ modules aren't even planned until after
+*C++20*. That's in FOUR years. Four years ago you were still a scrub writing
+Java getting stressed out about doing a stupid Android app wondering how to
+rasterize an SVG because it would be "easier" to work with. Give me a break. If
+this project ends up actually being important then you can start worrying about
+being able to reproduce it.
+*** Not getting bogged down in software engineering best practices.
+*** Remembering how much I miss JavaScript.
+OMG JAVASCRIPT IS SOOOO NICE.
+** Milestones
+*** DONE Get a window showing.
+CLOSED: [2016-10-04 Tue 22:32]
+I now have a window showing. It's technically just the browser since I decided
+to go for a web-based approach. The state of window systems for C++ is quite
+abysmal. There aren't very many great APIs for drawing to the screen yet.
+
+[[./img/window.png]]
+*** DONE DOING Make a 2D canvas.
+CLOSED: [2016-10-05 Wed 01:59]
+Woot, I can now draw ANYTHING to a screen. That's pretty fucking powerful I
+think. This is all done in software right now without GPU acceleration but
+whatever. I could go the WebGL route but that would complicate things. All I
+need is a canvas baby.
+
+That beautiful beautiful green box.
+
+[[./img/canvas.png]]
+*** DONE Render points
+CLOSED: [2016-10-06 Thu 05:54]
+
+[[./img/red_points.png]]
+Woot, there's now basic camera projection going for 3D points in the camera
+frame. Next step is probably to be able to transform the points to a different
+frame since this will eventually be used for generic laser scan data. Could also
+work on colouring the points by height/depth/whatever.
+
+*** DONE Colour by depth
+CLOSED: [2016-10-09 Sun 03:20]
+I just have it done using grayscale now. This wasn't too bad to work with.
+
+[[./img/points_coloured_by_depth_in_greyscale.png]]
+*** TODO Implement transformations
+Could break it down into rotation and translation.
+
+**** DONE Implement rotation
+CLOSED: [2016-10-06 Thu 06:51]
+
+[[./img/rotation.gif]]
+**** TODO Implement translation
+Done, just have to add screenshot.
+*** TODO Refactor application
+*** TODO Allow camera to move through scene
+*** TODO Render a point cloud from a PLY file.
+*** NOT DOING Get a native window showing with a Qt5 facade.
+*** TODO Make a WebGL canvas.
+Might not be needed. It might be more interesting to implement a 3D rendering
+and transformation pipeline in pure software. I can now draw to a screen!
+*** TODO Re-implement this in Windows with Standard C++/WinRT
+This is the only sane looking GUI API right now.
+*** Open a Velodyne pcap.
+*** Draw to screen.
+*** Decode a Velodyne pcap.

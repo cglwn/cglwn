@@ -1,0 +1,66 @@
+#+TITLE:  Pong Reinforcement Learning
+
+* Milestones
+** Install OpenAI Gym
+Followed the tutorial and it worked.
+** Obtain frame of Pong
+Used the provided =Pong-v0= to create a Pong environment and was able to get this frame:
+
+[[./img/pong_frame.png]]
+
+
+#+BEGIN_SRC python
+import gym
+import matplotlib.pyplot as plt
+
+env = gym.make('Pong-v0')
+observation = env.reset()
+plt.imshow(observation)
+plt.show()
+#+END_SRC
+** Move paddle in Pong
+This can be done by calling the ~step()~ function with a member of the Pong
+environment's action space. The action space for Pong is ~Discrete(6)~.
+
+According to
+[[https://github.com/openai/gym/blob/0c4cc9c2d9ae9f50c93159b14691327baceff7bf/gym/spaces/discrete.py]],
+a ~Discrete(n)~ action space goes from 0 to n-1. Not sure how this maps to
+specific buttons on an Atari controller. I might have to go digging a bit more.
+** Find out what the inputs to ~step()~ mean for Pong
+Actions are set here: [[https://github.com/openai/gym/blob/0c4cc9c2d9ae9f50c93159b14691327baceff7bf/gym/envs/atari/atari_env.py#L50]]
+Some time passes...
+
+FOUND IT!
+It was just at the bottom of that file!
+#+BEGIN_SRC python
+ACTION_MEANING = {
+    0 : "NOOP",
+    1 : "FIRE",
+    2 : "UP",
+    3 : "RIGHT",
+    4 : "LEFT",
+    5 : "DOWN",
+    6 : "UPRIGHT",
+    7 : "UPLEFT",
+    8 : "DOWNRIGHT",
+    9 : "DOWNLEFT",
+    10 : "UPFIRE",
+    11 : "RIGHTFIRE",
+    12 : "LEFTFIRE",
+    13 : "DOWNFIRE",
+    14 : "UPRIGHTFIRE",
+    15 : "UPLEFTFIRE",
+    16 : "DOWNRIGHTFIRE",
+    17 : "DOWNLEFTFIRE",
+}
+#+END_SRC
+
+In summary, since Pong only needs Up and Down we only need =2= and =5= passed in.
+| n | Effect of ~Discrete(n)~ |
+|---+-------------------------|
+| 2 | Up                      |
+| 5 | Down                    |
+
+* Resources
+- http://karpathy.github.io/2016/05/31/rl/
+Great resource explaining Policy Gradients.

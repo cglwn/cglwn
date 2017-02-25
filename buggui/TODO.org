@@ -1,0 +1,20 @@
+* When is this due?
+- 5PM at March 13
+* What am I supposed to learn?
+- Affine transforms
+- Scene graphs
+- Design and implementation of interactions that use these techniques
+* What are the requirements?
+- [ ] Create canvas element
+  - [ ] Make canvas 800x600
+- [ ] Create interactive car with following interactions
+  - [ ] Position it on the screen by selecting it and dragging it with a pointer
+  - [ ] Rotate it about its center by selecting it and dragging it with a pointer
+  - [ ] Make it wider or longer by manipulating control points on the car
+  - [ ] Make the axles longer by interactively pulling the tires out
+  - [ ] Turn the car's front wheels by dragging them with the mouse
+- [ ] Meet interaction limits
+  - [ ] Length(50px - 200px)
+  - [ ] Width (25px - 150px)
+  - [ ] Axle Width (Always selectable and at most 75px)
+  - [ ] Axle Width (Always selectable and at most 75px)
