@@ -1,3 +1,5 @@
+"""Plots GPS data from a CSV file.
+"""
 import argparse
 
 import matplotlib.pyplot as plt
