@@ -1,12 +1,13 @@
 """Show an image stack consisting of a intensity, time, and range data.
 """
 import argparse
+import os
+import sys
+
+import cv2
 import matplotlib.gridspec as gridspec
 import matplotlib.pyplot as plt
 import numpy as np
-import os
-
-import cv2
 
 parser = argparse.ArgumentParser(description="Plot image stacks.")
 parser.add_argument(
