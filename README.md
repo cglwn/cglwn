@@ -13,6 +13,7 @@
 - [pong_reinforcement_learning](./pong_reinforcement_learning) contains experiments using reinforcement learning to play Pong from the OpenAI Gym.
 - [public_or_private](./public_or_private) is an example of how to use `libclang` to determine whether a C++ class member is public or private.
 - [sauna](./sauna) is an application for working with robotics datasets.
+- [save_point_cloud2](./save_point_cloud2) is an example of how to write a ROS PointCloud2 message to a ROS bag.
 - [variance_app](./variance_app) is a small visualization to see the effect of the variance of a random variable.
 - [velodyne_unpacker](./velodyne_unpacker) shows how to parse PCAP files from Velodyne logs in order to obtain point clouds.
 - [web](./web) contains a bunch of miscellaneous web experiments.
