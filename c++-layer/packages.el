@@ -1,6 +1,7 @@
 (defconst c++-layer-packages
   '(
     cc-mode
+    clang-format
     flycheck
     modern-cpp-font-lock
     rtags))
@@ -24,3 +25,10 @@
     (use-package flycheck-rtags
       :ensure rtags)
     ))
+
+(defun c++-layer/init-clang-format ()
+  :defer t
+  :init
+  (progn
+    (spacemacs/set-leader-keys-for-major-mode 'c++-mode
+      "=" 'clang-format-buffer)))
