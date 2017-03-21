@@ -9,6 +9,7 @@
 - [external](./external) is third party code written by others.
 - [gaussian_process](./gaussian_process) contains a process for visualizing Gaussian Process regression from machine learning.
 - [nclt](./nclt) contains various tools for working with the University of Michigan North Campus Long Term dataset for robotics research.
+- [nlls](./nlls) is a non-linear least squares solver leveraging Ceres Solver.
 - [point_cloud_renderer](./point_cloud_renderer) is a barebones point cloud renderer for the web.
 - [pong_reinforcement_learning](./pong_reinforcement_learning) contains experiments using reinforcement learning to play Pong from the OpenAI Gym.
 - [public_or_private](./public_or_private) is an example of how to use `libclang` to determine whether a C++ class member is public or private.
