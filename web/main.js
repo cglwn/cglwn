@@ -69,7 +69,6 @@ function drawPose(context2D, x, y, theta) {
     context2D.strokeStyle = "red";
     context2D.beginPath();
     context2D.moveTo(x, y);
-    // context2D.lineTo(x + scale, y);
     context2D.lineTo(x + scale * Math.cos(theta), y + scale * Math.sin(theta));
     context2D.stroke();
     context2D.closePath();
@@ -78,7 +77,6 @@ function drawPose(context2D, x, y, theta) {
     context2D.beginPath();
     context2D.strokeStyle = "blue";
     context2D.moveTo(x, y);
-    // context2D.lineTo(x , y + scale);
     context2D.lineTo(x + scale * Math.cos(theta + Math.PI / 2), y + scale * Math.sin(theta + Math.PI / 2));
     context2D.stroke();
     context2D.closePath();
