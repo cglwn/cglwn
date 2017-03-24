@@ -1,6 +1,5 @@
 # Projects
 
-- [buggui](./buggui) is a User Interface class assignment to manipulate a car.
 - [c++-layer](./c++-layer) is a [Spacemacs](http://spacemacs.org/) layer containing my C++ editing configuration.
 - [c++-python-binding-generator](./c++-python-binding-generator) uses `libclang` to parse C++ source files in order to generate Python bindings automatically.
 - [cpp-concurrency](./cpp-concurrency) contains some example code for concurrency in C++.
