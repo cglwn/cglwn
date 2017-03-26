@@ -3,3 +3,7 @@ build/
 *.pyc
 cmake-build-debug/
 .cache/
+node_modules/
+*.gypi
+autogypi.json
+binding.gyp
