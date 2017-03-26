@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(m1.multiply(m2).print());
 
-    app_model = new ApplicationModel([x1, x2, x3], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]);
+    var app_model = new ApplicationModel([x1, x2, x3], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]);
     app_model.addObserver((points, x, y, z, roll, pitch, yaw) => {
         points.forEach(point => {
             drawPoint(ctx, point, "red", [x, y, z], [roll, pitch, yaw]);
