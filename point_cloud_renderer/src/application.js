@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const rollSlider = document.getElementById("roll-slider");
     rollSlider.addEventListener("input", () => {
         ctx.fillStyle = "#90C3D4";
-        ctx.fill(0, 0, canvas.width, canvas.height);
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         app_model.setRotation([parseFloat(rollSlider.value), app_model.pitch, app_model.yaw]);
     });
 
