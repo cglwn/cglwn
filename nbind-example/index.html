@@ -2,13 +2,15 @@
 <script>
     nbind.init(function(err, binding) {
         var lib = binding.lib;
-        lib.Greeter.sayHello("you");
+        var caller = new lib.CallbackCaller();
+        caller.addCallback(function(val) {
+            console.log(val);
+        });
 
-        /* var caller = new lib.CallbackCaller();*/
-        /* caller.addCallback(function(val) {*/
-        /* console.log(val);*/
-        /* });*/
-
-        /* caller.callCallback();*/
+        caller.callCallback();
+        caller.callCallback();
+        caller.callCallback();
+        caller.callCallback();
+        caller.callCallback();
     });
 </script>
