@@ -252,19 +252,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     model.incrementFx();
     model.incrementFx();
-    const m1 = new Matrix(1, 1);
-    m1.set(0, 0, 2);
-    console.log("m1");
-    console.log(m1.print());
-    console.log("m1");
-    console.log("m1");
-    console.log("m1");
-    console.log("m1");
-    console.log("m1");
-    const m2 = new Matrix(1, 1);
-    m2.set(0, 0, 3);
-
-    console.log(m1.multiply(m2).print());
 
     var app_model = new ApplicationModel([x1, x2, x3], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0]);
     app_model.addObserver((points, x, y, z, roll, pitch, yaw) => {
@@ -272,14 +259,6 @@ document.addEventListener("DOMContentLoaded", () => {
             drawPoint(ctx, point, "red", [x, y, z], [roll, pitch, yaw]);
         });
     });
-
-    app_model.addObserver((points, x, y, z, roll, pitch, yaw) => {
-        console.log("New x is " + x);
-        console.log("New Yaw is " + yaw);
-    });
-
-    // app_model.setRotation([0, 250, 300]);
-
 
     const xSlider = document.getElementById("x-slider");
     xSlider.addEventListener("input", () => {
