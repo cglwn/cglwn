@@ -8,6 +8,7 @@
 - [external](./external) is third party code written by others.
 - [gaussian_process](./gaussian_process) contains a process for visualizing Gaussian Process regression from machine learning.
 - [geometry-js](./geometry-js) are some utilities for working with geometries in JavaScript.
+- [nbind-example](./nbind-example) shows an example for passing callbacks to C++ from JavaScript.
 - [nclt](./nclt) contains various tools for working with the University of Michigan North Campus Long Term dataset for robotics research.
 - [nlls](./nlls) is a non-linear least squares solver leveraging Ceres Solver.
 - [point_cloud_renderer](./point_cloud_renderer) is a barebones point cloud renderer for the web.
