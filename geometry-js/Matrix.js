@@ -2,15 +2,15 @@ class Matrix {
     constructor(rows, cols) {
         this.rows = rows;
         this.cols = cols;
-        this.matrix_storage = Array(rows);
+        this.matrixStorage = Array(rows);
 
         for (let i = 0; i < rows; i++) {
-            this.matrix_storage[i] = Array(cols);
+            this.matrixStorage[i] = Array(cols);
         }
 
         for (let i = 0; i < rows; i++) {
             for (let j = 0; j < cols; j++) {
-                this.matrix_storage[i][j] = 0;
+                this.matrixStorage[i][j] = 0;
             }
         }
     }
@@ -19,14 +19,14 @@ class Matrix {
         if (row < 0 || row > this.rows || col < 0 || col > this.cols) {
             throw ("Out of bounds call on Matrix.set");
         }
-        this.matrix_storage[row][col] = value;
+        this.matrixStorage[row][col] = value;
     }
 
     get(row, col) {
         if (row < 0 || row > this.rows || col < 0 || col > this.cols) {
             throw ("Out of bounds call on Matrix.get");
         }
-        return this.matrix_storage[row][col];
+        return this.matrixStorage[row][col];
     }
 
     multiply(rhs_matrix) {
@@ -56,7 +56,7 @@ class Matrix {
             for (let j = 0; j < this.cols; j++) {
                 console.log("i: " + i);
                 console.log("j: " + j);
-                console.log(this.matrix_storage[i][j]);
+                console.log(this.matrixStorage[i][j]);
             }
         }
     }
