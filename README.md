@@ -18,4 +18,5 @@
 - [save_point_cloud2](./save_point_cloud2) is an example of how to write a ROS PointCloud2 message to a ROS bag.
 - [variance_app](./variance_app) is a small visualization to see the effect of the variance of a random variable.
 - [velodyne_unpacker](./velodyne_unpacker) shows how to parse PCAP files from Velodyne logs in order to obtain point clouds.
+- [viridis_cpp](./viridis_cpp) is a header-only library for the perceptually uniform [Viridis](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) colour palette for better visualizations.
 - [web](./web) contains a bunch of miscellaneous web experiments.
